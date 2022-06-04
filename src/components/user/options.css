@@ -1,0 +1,25 @@
+.header .header__container__group__access__options button{
+    padding: .25rem 1rem;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .header__container__group__access__options button:hover{
+    color: #000;
+}
+
+@media (max-width:991px){
+    .header__container__group__access__options{
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width:992px){
+    .header .header__container__group__access__options{
+        order: 4;
+        flex-grow: 1;
+    }
+}
