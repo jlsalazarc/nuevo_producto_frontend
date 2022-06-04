@@ -9,7 +9,8 @@ export function Navbar(){
         {codigo: 3, nombre: 'Buscar mi Impacto', ref: 'experiencias'}]);
 
     return (
-        <ul>
+
+            <ul>
             {                
                 menuList.map((menu) => {
                     return (    
@@ -18,6 +19,7 @@ export function Navbar(){
                     )
                 })
             }
-        </ul>        
+        </ul>
+                
     );
 }
