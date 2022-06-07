@@ -12,6 +12,7 @@ export const USER_WARNING='USER_WARNING';
 export const USER_LGOUT='USER_LGOUT';
 
 const initialState={
+    nombre:"",
     email:"",
     password:"",
     loading:false,
@@ -39,15 +40,15 @@ export function changeUserInput(name,value){
     }
 }
 
-export function registerUser(fullname,email, password) {
+export function registerUser(nombre,email, password) {
     return async function (dispatch) {
         try {
             dispatch({ type: REGISTER_USER_LOADING });
             const { data } = await axios({
             method: 'POST',
             baseURL:process.env.REACT_APP_API,
-            url: '/users/register',
-            data: {fullname,email, password },
+            url: '/users/signup',
+            data: {nombre,email, password },
         });
         dispatch({ type: REGISTER_USER_SUCCESS, payload:data});
         } 
@@ -65,7 +66,7 @@ export function loginUser(email,password) {
             const { data } = await axios({
             method: 'POST',
             baseURL:process.env.REACT_APP_API,
-            url: '/users/login',
+            url: '/users/signin',
             data:{email,password},
         })
         dispatch({ type:LOGIN_USER_SUCCESS, payload: data }) 

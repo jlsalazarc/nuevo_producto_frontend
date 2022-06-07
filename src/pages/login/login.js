@@ -1,5 +1,5 @@
 import { FormLogin } from "../../components/login/form"
-import { useDispatch,useSelector } from 'redux';
+import { useSelector,useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { UserWarning,changeUserInput,loginUser } from "../../store/userReducer";
@@ -30,7 +30,7 @@ export function Login(){
     useEffect(()=>{
         if(userData?.token){
             localStorage.setItem('token',userData.token)
-            navigate('/dashboard');
+            navigate('/');
         }        
     })
     return (
