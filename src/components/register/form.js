@@ -1,18 +1,14 @@
-import './form.css'
-export function FormRegister(){
+
+export function FormRegister({handleSubmit,hanldeChange}){
     return (
         <>
         <div className='formRegister'>
-        <form className='form_box_login'>
-        <label>Email:
-        <input type='text' name='email' />
-        </label><br></br>
-        <label>Contraseña:
-        <input type='password' name='password' />
-        </label><br></br>
-        <label>
+        <form className='form_box_login' onSubmit={handleSubmit}>
+        <input type='text' name='email' placeholder='email' onChange={hanldeChange}/>
+        <br></br>
+        <input type='password' name='password'  placeholder='password' onChange={hanldeChange}/>
+        <br></br>
         <button>Ingresar</button>
-        </label>
         </form>
         </div>
         </>
