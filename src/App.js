@@ -1,11 +1,26 @@
 import './App.css'
+import {
+  unstable_HistoryRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 import { Index } from './pages/index.js';
+import { Login } from './pages/login/login';
+import { Register } from './pages/register/register';
+
+export const history = createBrowserHistory();
 
 function App() {
   return (
-    <div className="App">
-      <Index />
-    </div>
+    <Router history={history}>
+    <Routes>
+      <Route  path='/' element={<Index />}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
+</Router>
   );
 }
 
