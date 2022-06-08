@@ -1,5 +1,5 @@
 import './logo.css'
-import Logos from './Logo-risks.PNG'
+import Logos from '../img/Logo-risks.PNG'
 
 export function Logo(){
     return (
