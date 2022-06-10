@@ -9,20 +9,22 @@ import { createBrowserHistory } from 'history';
 import { Index } from './pages/user/index';
 import { Login } from './pages/login/login';
 import { Register } from './pages/register/register';
-import { Proyectos } from './pages/proyectos/proyectos';
+import { Product } from './pages/product/product';
+
 
 export const history = createBrowserHistory();
 
 function App() {
   return (
     <Router history={history}>
-    <Routes>
-      <Route  path='/' element={<Index />}/>
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route  path='/proyectos' element={<Proyectos />}/>
-    </Routes>
-</Router>
+      <Routes>
+        <Route  path='/' element={<Index />}/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/project" element={<Product />} />
+      </Routes>
+    </Router>
+
   );
 }
 

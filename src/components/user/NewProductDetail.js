@@ -1,4 +1,4 @@
-import './NewProductDetail.css'
+{/*import './NewProductDetail.css'
 import { useState,useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { Header } from '../../components/user/header';
 
 export function DestinyDetail () {
     const navigate =useNavigate ();
-    const {destinyId} = useParams();
+    const {projectId} = useParams();
     const [destinydetail, setDestinydetail] = useState ([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -18,7 +18,7 @@ export function DestinyDetail () {
         axios({
             method:'GET',
             baseURL: process.env.BASE_URL,
-            url:`/proyectos/${destinyId}`
+            url:`/proyectos`,
         })
             .then(({data}) => setDestinydetail(data))
             .catch(() => setError(true))
@@ -35,8 +35,8 @@ export function DestinyDetail () {
                 <Header/>
             </header>
             <div className = "body_destinydetail">
-                <div className = "body_destinydetail_description">            {console.log(destinydetail.Descripcion)}
-                    <p>{destinydetail.Descripcion}</p>
+                <div className = "body_destinydetail_description">            {console.log(destinydetail.descripcion)}
+                    <p>{destinydetail.descripcion}</p>
                 </div>
                 <div className = "body_destinydetail_description">
                     <h2>Comentarios</h2>
@@ -46,3 +46,4 @@ export function DestinyDetail () {
         </>
     )
 }
+*/}

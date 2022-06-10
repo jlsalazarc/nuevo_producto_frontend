@@ -1,0 +1,29 @@
+.content_left{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../images/primera_portada.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.93;
+}
+/*content div*/
+.about_content{
+    position: absolute;
+    width: 450px;
+    height: fit-content;
+    bottom: 80px;
+    left: 45px;
+    align-items: center;
+    background-color: rgba(204, 221, 236, 0.377);
+    border-radius: 15px;
+    
+}
+/*content h2 and p*/
+.about_content_text{
+    position: relative;
+    font-style: italic;
+    font-size: medium;
+    color: white;
+    padding:10px;
+    font-weight: bold;
+}
